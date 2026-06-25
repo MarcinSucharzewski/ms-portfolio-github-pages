@@ -1,0 +1,2 @@
+link do tego projektu na github:
+https://github.com/MarcinSucharzewski/python-basics

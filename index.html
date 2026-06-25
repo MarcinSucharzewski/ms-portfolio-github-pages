@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marcin Sucharzewski – Entry-level Data Analyst. Portfolio showcasing SQL, Power BI, Excel and Python data projects." />
+  <title>Marcin Sucharzewski | Data Analyst</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">MS<span class="accent">.</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="https://github.com/MarcinSucharzewski" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <p class="hero-greeting fade-in-up" style="--delay: 0.1s">Hi, my name is</p>
+          <h1 class="hero-name fade-in-up" style="--delay: 0.2s">Marcin Sucharzewski<span class="accent">.</span></h1>
+          <h2 class="hero-title fade-in-up" style="--delay: 0.3s">
+            <span id="typed-text"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-description fade-in-up" style="--delay: 0.4s">
+            Entry-level Data Analyst with a practical background in warehouse operations and inventory processes.
+            Skilled in <strong>Excel</strong>, <strong>SQL</strong>, <strong>Power BI</strong> and <strong>Python</strong>,
+            with hands-on portfolio projects focused on sales analysis, inventory reporting and business dashboards.
+          </p>
+          <div class="hero-actions fade-in-up" style="--delay: 0.5s">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          </div>
+          <div class="hero-socials fade-in-up" style="--delay: 0.6s">
+            <a href="https://github.com/MarcinSucharzewski" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <!-- <a href="mailto:mail@gmail.com" aria-label="Send email">
+              <i class="fa-solid fa-envelope"></i>
+            </a> -->
+            <!-- <a href="tel:+48000000000" aria-label="Phone">
+              <i class="fa-solid fa-phone"></i>
+            </a> -->
+          </div>
+        </div>
+        <div class="hero-visual fade-in-up" style="--delay: 0.3s">
+          <div class="avatar-wrapper">
+            <img
+              src="https://avatars.githubusercontent.com/u/187550437?v=4"
+              alt="Marcin Sucharzewski"
+              class="avatar"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a data analyst in training, combining <strong>20+ years of hands-on warehouse and logistics experience</strong>
+              with newly acquired data skills. I understand how operational data is generated at ground level,
+              which gives me a practical perspective when designing dashboards and reports.
+            </p>
+            <p>
+              I enjoy turning raw data into clear, actionable insights that support better business decisions.
+              Whether it's a sales forecast, a warehouse performance dashboard or a relational database schema,
+              I approach every project with attention to detail and a focus on usability.
+            </p>
+            <p>
+              Currently studying <strong>Computer Science</strong> with a specialisation in
+              <strong>Data Analytics &amp; Machine Learning</strong> at a university in Poznań, Poland.
+            </p>
+            <div class="about-contacts">
+              <!-- <a href="mailto:mail@gmail.com" class="contact-chip">
+                <i class="fa-solid fa-envelope"></i> mail@gmail.com
+              </a> -->
+              <!-- <a href="tel:+48000000000" class="contact-chip">
+                <i class="fa-solid fa-phone"></i> +48 732 454 134
+              </a> -->
+              <span class="contact-chip">
+                <i class="fa-solid fa-location-dot"></i> Poznań, Poland
+              </span>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <span class="stat-number">20<span class="accent">+</span></span>
+              <span class="stat-label">Years of Work Experience</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">16<span class="accent">+</span></span>
+              <span class="stat-label">GitHub Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">5<span class="accent">+</span></span>
+              <span class="stat-label">Certifications</span>
+            </div>
+            <!-- <div class="stat-card">
+              <span class="stat-number">95<span class="accent">%</span></span>
+              <span class="stat-label">ML Model Accuracy (RF)</span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section section-alt reveal">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+        <div class="skills-grid">
+
+          <div class="skill-category">
+            <div class="skill-category-icon"><i class="fa-solid fa-chart-bar"></i></div>
+            <h3>Data &amp; BI Tools</h3>
+            <ul class="skill-list">
+              <li><i class="fa-solid fa-check"></i> Microsoft Excel &amp; Power Query</li>
+              <li><i class="fa-solid fa-check"></i> Power BI</li>
+              <li><i class="fa-solid fa-check"></i> Dashboard Design</li>
+              <li><i class="fa-solid fa-check"></i> KPI Reporting</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>SQL &amp; Databases</h3>
+            <ul class="skill-list">
+              <li><i class="fa-solid fa-check"></i> SQL (SELECT, JOINs, subqueries)</li>
+              <li><i class="fa-solid fa-check"></i> PostgreSQL</li>
+              <li><i class="fa-solid fa-check"></i> Views &amp; Indexes</li>
+              <li><i class="fa-solid fa-check"></i> ER Diagram Design</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-icon"><i class="fa-brands fa-python"></i></div>
+            <h3>Python &amp; Data Science</h3>
+            <ul class="skill-list">
+              <li><i class="fa-solid fa-check"></i> Python (Pandas, NumPy)</li>
+              <li><i class="fa-solid fa-check"></i> Matplotlib &amp; Seaborn</li>
+              <li><i class="fa-solid fa-check"></i> Scikit-learn</li>
+              <li><i class="fa-solid fa-check"></i> Jupyter Notebook</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <h3>Analytical Skills</h3>
+            <ul class="skill-list">
+              <li><i class="fa-solid fa-check"></i> Data Cleaning</li>
+              <li><i class="fa-solid fa-check"></i> Data Visualisation</li>
+              <li><i class="fa-solid fa-check"></i> Business Analysis</li>
+              <li><i class="fa-solid fa-check"></i> ML Model Evaluation</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Skill tags -->
+        <div class="skill-tags">
+          <span class="tag">Excel</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Power Query</span>
+          <span class="tag">SQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Scikit-learn</span>
+          <span class="tag">Matplotlib</span>
+          <span class="tag">Seaborn</span>
+          <span class="tag">Jupyter</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">XGBoost</span>
+          <span class="tag">Random Forest</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">A selection of my data analysis and engineering projects</p>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: analiza-sprzedazy -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <i class="fa-solid fa-chart-line project-icon"></i>
+              <a href="https://github.com/MarcinSucharzewski/analiza-sprzedazy" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/MarcinSucharzewski/analiza-sprzedazy" target="_blank" rel="noopener noreferrer">
+                Sales Analysis &amp; Forecasting
+              </a>
+            </h3>
+            <p class="project-description">
+              Comprehensive sales data analysis with ML forecasting models. Identifies seasonal patterns and key factors
+              driving sales. Achieved <strong>95% accuracy</strong> with Random Forest model.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-sm">Python</span>
+              <span class="tag tag-sm">Scikit-learn</span>
+              <span class="tag tag-sm">XGBoost</span>
+              <span class="tag tag-sm">Pandas</span>
+              <span class="tag tag-sm">Seaborn</span>
+              <span class="tag tag-sm">Jupyter</span>
+            </div>
+          </article>
+
+          <!-- Project 2: Analiza-wydajnosci-magazynu -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <i class="fa-solid fa-warehouse project-icon"></i>
+              <a href="https://github.com/MarcinSucharzewski/Analiza-wydajnosci-magazynu" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/MarcinSucharzewski/Analiza-wydajnosci-magazynu" target="_blank" rel="noopener noreferrer">
+                Warehouse Operations Analysis
+              </a>
+            </h3>
+            <p class="project-description">
+              Analysis of warehouse efficiency metrics: forklift utilisation, loading/unloading times and truck performance.
+              Includes CI pipeline and automated report generation.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-sm">Python</span>
+              <span class="tag tag-sm">Pandas</span>
+              <span class="tag tag-sm">Matplotlib</span>
+              <span class="tag tag-sm">Jupyter</span>
+              <span class="tag tag-sm">GitHub Actions</span>
+            </div>
+          </article>
+
+          <!-- Project 3: SklepKomputerowyDB -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <i class="fa-solid fa-database project-icon"></i>
+              <a href="https://github.com/MarcinSucharzewski/SklepKomputerowyDB" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/MarcinSucharzewski/SklepKomputerowyDB" target="_blank" rel="noopener noreferrer">
+                Computer Store Database
+              </a>
+            </h3>
+            <p class="project-description">
+              Relational PostgreSQL database for a computer hardware store. Includes ER diagram, 12 analytical queries,
+              views, admin scenarios and Python data generation scripts.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-sm">PostgreSQL</span>
+              <span class="tag tag-sm">SQL</span>
+              <span class="tag tag-sm">Python</span>
+              <span class="tag tag-sm">ER Design</span>
+            </div>
+          </article>
+
+          <!-- Project 4: Excel-Analiza -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <i class="fa-solid fa-file-excel project-icon"></i>
+              <a href="https://github.com/MarcinSucharzewski/Excel-Analiza" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/MarcinSucharzewski/Excel-Analiza" target="_blank" rel="noopener noreferrer">
+                Logistics Business Excel Model
+              </a>
+            </h3>
+            <p class="project-description">
+              End-to-end Excel model for a trading company covering inventory, orders, shipments, KPI analysis and
+              an executive dashboard. Demonstrates full data lifecycle management.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-sm">Excel</span>
+              <span class="tag tag-sm">Power Query</span>
+              <span class="tag tag-sm">Dashboard</span>
+              <span class="tag tag-sm">KPI</span>
+            </div>
+          </article>
+
+          <!-- Project 5: analiza-danych-titanica -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <i class="fa-solid fa-ship project-icon"></i>
+              <a href="https://github.com/MarcinSucharzewski/analiza-danych-titanica" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/MarcinSucharzewski/analiza-danych-titanica" target="_blank" rel="noopener noreferrer">
+                Titanic Data Analysis
+              </a>
+            </h3>
+            <p class="project-description">
+              Exploratory data analysis of the Titanic passenger dataset. Survival patterns, demographic breakdowns
+              and feature correlation visualisations using Pandas and Seaborn.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-sm">Python</span>
+              <span class="tag tag-sm">Pandas</span>
+              <span class="tag tag-sm">Seaborn</span>
+              <span class="tag tag-sm">EDA</span>
+            </div>
+          </article>
+
+          <!-- Project 6: analiza-danych-iris -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <i class="fa-solid fa-seedling project-icon"></i>
+              <a href="https://github.com/MarcinSucharzewski/analiza-danych-iris" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/MarcinSucharzewski/analiza-danych-iris" target="_blank" rel="noopener noreferrer">
+                Iris Dataset Analysis
+              </a>
+            </h3>
+            <p class="project-description">
+              Classic ML classification exercise on the Iris dataset. Includes data visualisation, correlation analysis
+              and model training with evaluation metrics.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-sm">Python</span>
+              <span class="tag tag-sm">Scikit-learn</span>
+              <span class="tag tag-sm">Matplotlib</span>
+              <span class="tag tag-sm">Classification</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="section-action" style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
+          <a href="other-projects.html" class="btn btn-primary">
+            <i class="fa-solid fa-folder-open"></i> More Projects
+          </a>
+          <a href="https://github.com/MarcinSucharzewski?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <i class="fa-brands fa-github"></i> See All 16 Repositories
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="section section-alt reveal">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Warehouse Worker / Forklift Operator</h3>
+                <!-- <span class="timeline-company">OSJE &amp; Various Employers</span> -->
+                <span class="timeline-period">20+ years</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Over 20 years of experience in warehouse operations, including goods movement, stock handling and order preparation.</li>
+                <li>Operated forklifts to transport, load and unload goods safely and efficiently.</li>
+                <li>Supported inventory processes by checking stock levels, locating products and reporting quantity differences.</li>
+                <li>Worked with warehouse documentation and product flow, gaining a practical understanding of logistics and inventory control.</li>
+                <li>Maintained accuracy and attention to detail while handling goods, orders and warehouse locations.</li>
+                <li>Built a strong operational background valuable for data analysis projects related to sales, inventory and warehouse reporting.</li>
+              </ul>
+              <div class="timeline-skills">
+                <span class="tag tag-sm">Inventory Management</span>
+                <span class="tag tag-sm">Logistics</span>
+                <span class="tag tag-sm">Forklift Operation</span>
+                <span class="tag tag-sm">Stock Control</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Education &amp; Certifications</h2>
+
+        <div class="edu-grid">
+          <!-- Education card -->
+          <div class="edu-card edu-card-main">
+            <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="edu-body">
+              <h3>Computer Science</h3>
+              <p class="edu-spec">Specialisation: Data Analytics &amp; Machine Learning</p>
+              <p class="edu-meta"><i class="fa-solid fa-location-dot"></i> Poznań, Poland</p>
+              <p class="edu-meta"><i class="fa-solid fa-calendar"></i> 2024 – Present</p>
+            </div>
+          </div>
+
+          <!-- Courses -->
+          <div class="courses-grid">
+            <h3 class="courses-heading">Certifications &amp; Courses</h3>
+
+            <div class="course-item">
+              <div class="course-icon"><i class="fa-solid fa-certificate"></i></div>
+              <div class="course-body">
+                <span class="course-name">Kaggle Pandas Course</span>
+                <span class="course-provider">Kaggle</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1NDVWUaDhp4pcWbM8W7IXI-maoh1oBcpM/view" target="_blank" rel="noopener noreferrer" class="course-link" aria-label="View Kaggle Pandas certificate">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="course-item">
+              <div class="course-icon"><i class="fa-brands fa-google"></i></div>
+              <div class="course-body">
+                <span class="course-name">Google Data Analytics</span>
+                <span class="course-provider">Google / Coursera</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1PtEDywlGeYbLfVN_AT7sFAB4VKi_mY67/view" target="_blank" rel="noopener noreferrer" class="course-link" aria-label="View Google Data Analytics certificate">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="course-item">
+              <div class="course-icon"><i class="fa-solid fa-database"></i></div>
+              <div class="course-body">
+                <span class="course-name">SQL Basics</span>
+                <span class="course-provider">Online Course</span>
+              </div>
+              <!-- <a href="" target="_blank" rel="noopener noreferrer" class="course-link" aria-label="View SQL Basics certificate">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a> -->
+            </div>
+
+            <div class="course-item">
+              <div class="course-icon"><i class="fa-solid fa-chart-pie"></i></div>
+              <div class="course-body">
+                <span class="course-name">Power BI Basics</span>
+                <span class="course-provider">Online Course</span>
+              </div>
+              <a href="https://drive.google.com/file/d/15MIvaK7VuxYrpiaUike-Y5huAdvNGsFm/view" target="_blank" rel="noopener noreferrer" class="course-link" aria-label="View Power BI Basics certificate">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="course-item">
+              <div class="course-icon"><i class="fa-brands fa-python"></i></div>
+              <div class="course-body">
+                <span class="course-name">Python Basics</span>
+                <span class="course-provider">Online Course</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1_qSAbih7BvQpZJ1ni2x1fd_lRtOfKSOZ/view" target="_blank" rel="noopener noreferrer" class="course-link" aria-label="View Python for Beginners certificate">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="languages-row">
+          <h3 class="courses-heading">Languages</h3>
+          <div class="lang-chips">
+            <div class="lang-chip">
+              <span class="lang-name">Polish</span>
+              <span class="lang-level native">Native</span>
+            </div>
+            <div class="lang-chip">
+              <span class="lang-name">English</span>
+              <span class="lang-level communicative">Communicative</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== REFERENCES ===================== -->
+    <section id="references" class="section section-alt reveal">
+      <div class="container">
+        <h2 class="section-title">References</h2>
+        <p class="section-subtitle">Professional references</p>
+        <div class="references-grid">
+
+          <div class="reference-card">
+            <div class="ref-avatar"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="ref-body">
+              <h4>Maciej</h4>
+              <!-- <span class="ref-company">OSJE</span> -->
+            </div>
+            <a href="https://drive.google.com/file/d/1B0sezcO7iqjB5hRZWPmx931XZDrBomzU/view?usp=drive_link"
+               target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <i class="fa-solid fa-file-lines"></i> Reference Letter
+            </a>
+          </div>
+
+          <div class="reference-card">
+            <div class="ref-avatar"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="ref-body">
+              <h4>Justyna</h4>
+              <span class="ref-company">OSJE Data</span>
+            </div>
+            <a href="https://drive.google.com/file/d/1ulmBjpNFnwR7xFK1YxAezmtSa4ezJVz2/view?usp=drive_link"
+               target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <i class="fa-solid fa-file-lines"></i> Reference Letter
+            </a>
+          </div>
+
+          <div class="reference-card">
+            <div class="ref-avatar"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="ref-body">
+              <h4>Marta</h4>
+              <!-- <span class="ref-company">OSJE</span> -->
+            </div>
+            <a href="https://drive.google.com/file/d/1CBGpFM5sLPDwJtKBAOcRGd8TEzpwddo3/view?usp=drive_link"
+               target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <i class="fa-solid fa-file-lines"></i> Reference Letter
+            </a>
+          </div>
+
+          <div class="reference-card">
+            <div class="ref-avatar"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="ref-body">
+              <h4>Jenelvie</h4>
+              <!-- <span class="ref-company">OSJE</span> -->
+            </div>
+            <a href="https://drive.google.com/file/d/1PtCm4qkw6sLwkKQc29Wz3lPHmVOumurL/view?usp=drive_link"
+               target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <i class="fa-solid fa-file-lines"></i> Reference Letter
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <p class="contact-lead">
+              I'm currently looking for new opportunities as a Data Analyst.
+              Whether you have a question, a project proposal or just want to say hello —
+              my inbox is always open!
+            </p>
+            <div class="contact-links">
+              <!-- <a href="mailto:mail@gmail.com" class="contact-row">
+                <span class="contact-row-icon"><i class="fa-solid fa-envelope"></i></span>
+                <span>mail@gmail.com</span>
+              </a>
+              <a href="tel:+48000000000" class="contact-row">
+                <span class="contact-row-icon"><i class="fa-solid fa-phone"></i></span>
+                <span>+48 732 454 134</span>
+              </a> -->
+              <a href="https://github.com/MarcinSucharzewski" target="_blank" rel="noopener noreferrer" class="contact-row">
+                <span class="contact-row-icon"><i class="fa-brands fa-github"></i></span>
+                <span>github.com/MarcinSucharzewski</span>
+              </a>
+              <span class="contact-row">
+                <span class="contact-row-icon"><i class="fa-solid fa-location-dot"></i></span>
+                <span>Poznań, Poland</span>
+              </span>
+            </div>
+            <!-- <a href="mailto:mail@gmail.com" class="btn btn-primary btn-lg">
+              Say Hello <i class="fa-solid fa-paper-plane"></i>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <!-- <p>Designed &amp; Built by <strong>Marcin Sucharzewski</strong></p> -->
+      <p><strong>Marcin Sucharzewski</strong></p>
+      <div class="footer-socials">
+        <a href="https://github.com/MarcinSucharzewski" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <!-- <a href="mailto:mail@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a> -->
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

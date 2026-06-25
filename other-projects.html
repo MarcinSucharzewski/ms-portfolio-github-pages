@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marcin Sucharzewski – Additional projects: Excel dashboards and Power BI reports." />
+  <title>Other Projects | Marcin Sucharzewski</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ---- Page-specific overrides ---- */
+    .page-hero {
+      padding: calc(var(--nav-height) + 60px) 0 60px;
+      text-align: center;
+    }
+
+    .page-hero .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 32px;
+      transition: var(--transition);
+    }
+
+    .page-hero .back-link:hover {
+      gap: 12px;
+      opacity: 1;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 800;
+      color: var(--text-white);
+      margin-bottom: 12px;
+    }
+
+    .page-hero p {
+      color: var(--slate);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ---- Category heading ---- */
+    .category-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .category-heading-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius);
+      background-color: var(--accent-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .category-heading h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-white);
+    }
+
+    .category-heading h2 span {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--slate);
+      font-family: var(--font-mono);
+      margin-top: 2px;
+    }
+
+    /* ---- Extended project card ---- */
+    .project-card-full {
+      background-color: var(--navy-light);
+      border: 1px solid rgba(100, 255, 218, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: var(--transition);
+      margin-bottom: 24px;
+    }
+
+    .project-card-full:hover {
+      border-color: rgba(100, 255, 218, 0.25);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-card-full-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .project-card-full-header h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-white);
+      line-height: 1.3;
+    }
+
+    .project-card-full-header .project-icon {
+      font-size: 1.4rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .project-card-full p {
+      color: var(--slate);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .features-list {
+      margin: 12px 0 20px;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 6px 16px;
+    }
+
+    .features-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--slate-light);
+      line-height: 1.5;
+    }
+
+    .features-list li i {
+      color: var(--accent);
+      font-size: 0.7rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .kpi-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .kpi-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--accent-dim);
+      color: var(--accent);
+      border: 1px solid rgba(100, 255, 218, 0.2);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+    }
+
+    /* ---- Section separator ---- */
+    .category-section:not(:first-child) {
+      margin-top: 64px;
+    }
+
+    /* ---- Back to top ---- */
+    .page-footer-action {
+      text-align: center;
+      padding: 48px 0 16px;
+    }
+
+    /* ---- Expand button ---- */
+    .btn-expand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 10px 22px;
+      background: transparent;
+      border: 1.5px solid var(--accent);
+      color: var(--accent);
+      border-radius: var(--radius);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: var(--font-sans);
+    }
+
+    .btn-expand:hover {
+      background-color: var(--accent-dim);
+    }
+
+    .btn-expand .expand-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .btn-expand[aria-expanded="true"] .expand-icon {
+      transform: rotate(180deg);
+    }
+
+    /* ---- Details panel ---- */
+    .project-details {
+      display: none;
+      margin-top: 28px;
+      border-top: 1px solid rgba(100, 255, 218, 0.12);
+      padding-top: 28px;
+    }
+
+    .project-details.is-open {
+      display: block;
+    }
+
+    /* ---- Gallery ---- */
+    .proj-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .proj-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid rgba(100, 255, 218, 0.1);
+      cursor: zoom-in;
+      transition: var(--transition);
+    }
+
+    .proj-img:hover {
+      border-color: var(--accent);
+      transform: scale(1.02);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ---- Full description text ---- */
+    .proj-text {
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    .proj-section {
+      margin-bottom: 22px;
+    }
+
+    .proj-section h4 {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 10px;
+    }
+
+    .proj-section p {
+      color: var(--slate);
+      margin-bottom: 6px;
+    }
+
+    .proj-section strong {
+      color: var(--text-white);
+    }
+
+    .proj-section ul {
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 5px 20px;
+    }
+
+    .proj-section ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      color: var(--slate-light);
+      font-size: 0.87rem;
+    }
+
+    .proj-section ul li::before {
+      content: '▸';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-size: 0.72rem;
+      margin-top: 4px;
+    }
+
+    /* ---- Lightbox ---- */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 12, 27, 0.97);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 56px 60px 48px;
+    }
+
+    .lightbox.is-open {
+      display: flex;
+    }
+
+    .lightbox img {
+      width: calc(100vw - 120px);
+      height: calc(100vh - 104px);
+      border-radius: var(--radius);
+      object-fit: contain;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    }
+
+    .lb-btn {
+      position: fixed;
+      background: rgba(100, 255, 218, 0.08);
+      border: 1px solid rgba(100, 255, 218, 0.2);
+      color: var(--text-white);
+      font-size: 1.2rem;
+      padding: 10px 16px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: var(--transition);
+      z-index: 1001;
+    }
+
+    .lb-btn:hover {
+      background: var(--accent-dim);
+      color: var(--accent);
+    }
+
+    #lb-close { top: 20px; right: 24px; font-size: 1.5rem; }
+    #lb-prev  { top: 50%; left: 16px; transform: translateY(-50%); }
+    #lb-next  { top: 50%; right: 16px; transform: translateY(-50%); }
+
+    #lb-counter {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--slate);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">MS<span class="accent">.</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#projects" class="nav-link">Projects</a>
+        <a href="index.html#experience" class="nav-link">Experience</a>
+        <a href="index.html#education" class="nav-link">Education</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+        <a href="https://github.com/MarcinSucharzewski" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <div class="page-hero">
+      <div class="container">
+        <a href="index.html" class="back-link">
+          <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <h1>Other Projects</h1>
+        <p>A collection of additional Excel and Power BI projects demonstrating dashboard design, data visualisation and business reporting.</p>
+      </div>
+    </div>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section">
+      <div class="container">
+
+        <!-- ===== EXCEL ===== -->
+        <div class="category-section">
+          <div class="category-heading">
+            <div class="category-heading-icon">
+              <i class="fa-solid fa-file-excel"></i>
+            </div>
+            <h2>
+              Microsoft Excel
+              <span>Interactive dashboards &amp; pivot table reports</span>
+            </h2>
+          </div>
+
+          <!-- Excel Project 1 -->
+          <article class="project-card-full reveal">
+            <div class="project-card-full-header">
+              <h3>Sales &amp; Warehouse Management Dashboard</h3>
+              <i class="fa-solid fa-chart-column project-icon"></i>
+            </div>
+            <p>
+              An interactive dashboard built in Microsoft Excel for monitoring sales performance, order fulfilment status
+              and warehouse stock levels. The report enables rapid evaluation of key business metrics through pivot tables,
+              slicers and conditional formatting.
+            </p>
+
+            <p><strong>Key features</strong></p>
+            <ul class="features-list">
+              <li><i class="fa-solid fa-circle-dot"></i> Monthly sales trend analysis</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Total sales value &amp; units sold KPIs</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Top 5 best-selling products</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Order status tracking (Pending, Packed, Shipped, Delivered)</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Inventory &amp; warehouse stock overview</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Dynamic year &amp; month filters via slicers</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Drill-down into individual orders &amp; products</li>
+            </ul>
+
+            <p><strong>KPIs tracked</strong></p>
+            <div class="kpi-row">
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Total Sales</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Units Sold</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Order Count</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Stock Level</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Order Fulfilment Rate</span>
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-sm">Excel</span>
+              <span class="tag tag-sm">Pivot Tables</span>
+              <span class="tag tag-sm">Slicers</span>
+              <span class="tag tag-sm">Conditional Formatting</span>
+              <span class="tag tag-sm">Dashboard</span>
+              <span class="tag tag-sm">KPI</span>
+            </div>
+
+            <button class="btn-expand" onclick="toggleDetails(this)" aria-expanded="false">
+              <i class="fa-solid fa-chevron-down expand-icon"></i>
+              <span>Rozwiń projekt</span>
+            </button>
+
+            <div class="project-details">
+              <div class="proj-gallery">
+                <img src="other_projects/Excel/Projekt1/Obraz1.png" class="proj-img" alt="Dashboard sprzedaży – widok 1" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Excel/Projekt1/Obraz2.png" class="proj-img" alt="Dashboard sprzedaży – widok 2" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Excel/Projekt1/Obraz3.png" class="proj-img" alt="Dashboard sprzedaży – widok 3" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Excel/Projekt1/Obraz4.png" class="proj-img" alt="Dashboard sprzedaży – widok 4" onclick="openLightbox(this)" loading="lazy">
+              </div>
+              <div class="proj-text">
+                <div class="proj-section">
+                  <h4>Opis projektu</h4>
+                  <p>Celem projektu było stworzenie interaktywnego dashboardu umożliwiającego analizę sprzedaży oraz monitorowanie realizacji zamówień i stanów magazynowych. Raport pozwala szybko ocenić wyniki sprzedaży, kontrolować proces realizacji zamówień oraz analizować najważniejsze wskaźniki biznesowe.</p>
+                  <p>Projekt został wykonany w programie <strong>Microsoft Excel</strong> z wykorzystaniem tabel, tabel przestawnych, wykresów oraz elementów interaktywnych.</p>
+                </div>
+                <div class="proj-section">
+                  <h4>Zastosowane narzędzia</h4>
+                  <ul>
+                    <li>Microsoft Excel</li>
+                    <li>Tabele Excel</li>
+                    <li>Tabele przestawne</li>
+                    <li>Wykresy kolumnowe i liniowe</li>
+                    <li>Fragmentatory (Slicery)</li>
+                    <li>Formatowanie warunkowe</li>
+                    <li>Formuły Excel</li>
+                    <li>Dashboard menedżerski</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Funkcjonalności raportu</h4>
+                  <ul>
+                    <li>Analiza sprzedaży według miesięcy</li>
+                    <li>Prezentacja łącznej wartości sprzedaży</li>
+                    <li>Monitorowanie liczby sprzedanych produktów</li>
+                    <li>Prezentacja pięciu najlepiej sprzedających się produktów</li>
+                    <li>Monitorowanie statusów realizacji zamówień (Oczekuje, Spakowano, Wysłane, Dostarczono)</li>
+                    <li>Filtrowanie danych według roku oraz miesiąca</li>
+                    <li>Analiza danych magazynowych</li>
+                    <li>Podgląd szczegółów zamówień i produktów</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Dane wykorzystane w projekcie</h4>
+                  <p>Projekt wykorzystuje trzy główne zestawy danych: <strong>bazę produktów</strong>, <strong>historię sprzedaży</strong> oraz <strong>historię realizacji zamówień</strong>. Każdy rekord zawiera m.in. kod produktu, nazwę, kategorię, cenę, stan magazynowy, lokalizację magazynu, datę sprzedaży, numer zamówienia, ilość, wartość sprzedaży oraz status realizacji.</p>
+                </div>
+                <div class="proj-section">
+                  <h4>Umiejętności zaprezentowane w projekcie</h4>
+                  <ul>
+                    <li>Projektowanie dashboardów biznesowych</li>
+                    <li>Analiza danych sprzedażowych</li>
+                    <li>Modelowanie danych w Excelu</li>
+                    <li>Tworzenie tabel przestawnych</li>
+                    <li>Budowanie interaktywnych raportów</li>
+                    <li>Wizualizacja danych</li>
+                    <li>Projektowanie wskaźników KPI</li>
+                    <li>Tworzenie wykresów biznesowych</li>
+                    <li>Praca z dużymi zestawami danych</li>
+                    <li>Przygotowywanie raportów menedżerskich</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Wartość biznesowa</h4>
+                  <p>Projekt wspiera podejmowanie decyzji poprzez szybki dostęp do najważniejszych informacji dotyczących sprzedaży i magazynu. Dashboard pozwala identyfikować najlepiej sprzedające się produkty, monitorować realizację zamówień oraz analizować trendy sprzedażowe, co pomaga usprawnić planowanie zapasów i procesów logistycznych.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Excel Project 2 -->
+          <article class="project-card-full reveal">
+            <div class="project-card-full-header">
+              <h3>Country Comparison – Socio-Economic Dashboard</h3>
+              <i class="fa-solid fa-earth-europe project-icon"></i>
+            </div>
+            <p>
+              An interactive analytical dashboard in Excel that allows users to compare key socio-economic indicators
+              across countries worldwide. Data can be filtered by continent and individual country using slicers,
+              with all charts updating dynamically.
+            </p>
+
+            <p><strong>Key features</strong></p>
+            <ul class="features-list">
+              <li><i class="fa-solid fa-circle-dot"></i> Filter by continent and country</li>
+              <li><i class="fa-solid fa-circle-dot"></i> GDP and GDP per capita analysis</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Population and population density</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Life expectancy comparison</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Unemployment rate analysis</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Country area visualisation</li>
+              <li><i class="fa-solid fa-circle-dot"></i> KPI cards with dynamic updates</li>
+            </ul>
+
+            <p><strong>KPIs tracked</strong></p>
+            <div class="kpi-row">
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> GDP (bn USD)</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> GDP per Capita</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Population</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Life Expectancy</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Unemployment Rate</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Area (km²)</span>
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-sm">Excel</span>
+              <span class="tag tag-sm">Pivot Tables</span>
+              <span class="tag tag-sm">Slicers</span>
+              <span class="tag tag-sm">KPI Cards</span>
+              <span class="tag tag-sm">Dashboard</span>
+              <span class="tag tag-sm">Data Visualisation</span>
+            </div>
+
+            <button class="btn-expand" onclick="toggleDetails(this)" aria-expanded="false">
+              <i class="fa-solid fa-chevron-down expand-icon"></i>
+              <span>Rozwiń projekt</span>
+            </button>
+
+            <div class="project-details">
+              <div class="proj-gallery">
+                <img src="other_projects/Excel/Projekt2/Obraz1.png" class="proj-img" alt="Analiza państw – widok 1" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Excel/Projekt2/Obraz2.png" class="proj-img" alt="Analiza państw – widok 2" onclick="openLightbox(this)" loading="lazy">
+              </div>
+              <div class="proj-text">
+                <div class="proj-section">
+                  <h4>Opis projektu</h4>
+                  <p>Projekt polega na stworzeniu interaktywnego dashboardu analitycznego umożliwiającego porównanie kluczowych wskaźników społeczno-gospodarczych wybranych państw świata. Raport został wykonany w programie <strong>Microsoft Excel</strong> i pozwala użytkownikowi analizować dane poprzez wybór kontynentu oraz konkretnego kraju za pomocą interaktywnych filtrów.</p>
+                  <p>Dashboard prezentuje najważniejsze wskaźniki ekonomiczne i demograficzne w przejrzystej formie graficznej, dzięki czemu użytkownik może szybko porównać poziom rozwoju poszczególnych państw.</p>
+                </div>
+                <div class="proj-section">
+                  <h4>Cel projektu</h4>
+                  <p>Celem projektu było zaprojektowanie nowoczesnego raportu menedżerskiego umożliwiającego analizę danych makroekonomicznych oraz porównywanie krajów pod względem najważniejszych wskaźników społecznych i gospodarczych.</p>
+                </div>
+                <div class="proj-section">
+                  <h4>Zastosowane narzędzia</h4>
+                  <ul>
+                    <li>Microsoft Excel</li>
+                    <li>Tabele Excel</li>
+                    <li>Tabele przestawne</li>
+                    <li>Wykresy kolumnowe, liniowe i słupkowe</li>
+                    <li>Fragmentatory (Slicery)</li>
+                    <li>Karty KPI</li>
+                    <li>Formatowanie warunkowe</li>
+                    <li>Formuły Excel</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Funkcjonalności raportu</h4>
+                  <ul>
+                    <li>Porównywanie państw z różnych kontynentów</li>
+                    <li>Filtrowanie danych według kontynentu i kraju</li>
+                    <li>Analiza produktu krajowego brutto (PKB)</li>
+                    <li>Analiza PKB per capita</li>
+                    <li>Porównanie liczby ludności</li>
+                    <li>Analiza długości życia</li>
+                    <li>Porównanie poziomu bezrobocia</li>
+                    <li>Analiza gęstości zaludnienia</li>
+                    <li>Prezentacja powierzchni państw</li>
+                    <li>Dynamiczna aktualizacja wykresów po zmianie filtrów</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Umiejętności zaprezentowane w projekcie</h4>
+                  <ul>
+                    <li>Projektowanie dashboardów analitycznych</li>
+                    <li>Wizualizacja danych biznesowych</li>
+                    <li>Tworzenie interaktywnych raportów</li>
+                    <li>Analiza danych ekonomicznych</li>
+                    <li>Budowanie wskaźników KPI</li>
+                    <li>Praca z tabelami przestawnymi</li>
+                    <li>Projektowanie wykresów</li>
+                    <li>Przygotowywanie raportów dla użytkowników biznesowych</li>
+                    <li>Organizacja i prezentacja danych w Excelu</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Wartość biznesowa</h4>
+                  <p>Dashboard umożliwia szybkie porównanie sytuacji gospodarczej i społecznej różnych państw oraz identyfikację różnic pomiędzy nimi. Dzięki interaktywnym filtrom użytkownik może analizować dane z wybranego regionu świata, co ułatwia przygotowywanie raportów, analiz oraz prezentacji.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ===== POWER BI ===== -->
+        <div class="category-section">
+          <div class="category-heading">
+            <div class="category-heading-icon">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <h2>
+              Microsoft Power BI
+              <span>Multi-page BI reports with DAX &amp; Power Query</span>
+            </h2>
+          </div>
+
+          <!-- Power BI Project 1 -->
+          <article class="project-card-full reveal">
+            <div class="project-card-full-header">
+              <h3>Sales Analysis Dashboard</h3>
+              <i class="fa-solid fa-chart-line project-icon"></i>
+            </div>
+            <p>
+              A four-page interactive Power BI report for comprehensive sales analysis. The report monitors the most
+              important KPIs, breaks down sales across multiple dimensions and includes geography, product and
+              customer-level views — all supported by DAX measures and interactive slicers.
+            </p>
+
+            <p><strong>Report pages</strong></p>
+            <ul class="features-list">
+              <li><i class="fa-solid fa-circle-dot"></i> Page 1 – Sales summary &amp; monthly trends</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Page 2 – Product category &amp; gender analysis</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Page 3 – Geographic analysis with Bing Maps</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Page 4 – Interactive filter panel</li>
+            </ul>
+
+            <p><strong>KPIs tracked</strong></p>
+            <div class="kpi-row">
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Total Sales</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Total Margin</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Margin %</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> No. of Customers</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> No. of Orders</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Sales by City</span>
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-sm">Power BI</span>
+              <span class="tag tag-sm">DAX</span>
+              <span class="tag tag-sm">Power Query</span>
+              <span class="tag tag-sm">Data Modelling</span>
+              <span class="tag tag-sm">Maps</span>
+              <span class="tag tag-sm">KPI Cards</span>
+              <span class="tag tag-sm">Slicers</span>
+            </div>
+
+            <button class="btn-expand" onclick="toggleDetails(this)" aria-expanded="false">
+              <i class="fa-solid fa-chevron-down expand-icon"></i>
+              <span>Rozwiń projekt</span>
+            </button>
+
+            <div class="project-details">
+              <div class="proj-gallery">
+                <img src="other_projects/Power%20BI/Projekt1/Obraz1.png" class="proj-img" alt="Dashboard sprzedaży PBI – widok 1" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Power%20BI/Projekt1/Obraz2.png" class="proj-img" alt="Dashboard sprzedaży PBI – widok 2" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Power%20BI/Projekt1/Obraz3.png" class="proj-img" alt="Dashboard sprzedaży PBI – widok 3" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Power%20BI/Projekt1/Obraz4.png" class="proj-img" alt="Dashboard sprzedaży PBI – widok 4" onclick="openLightbox(this)" loading="lazy">
+              </div>
+              <div class="proj-text">
+                <div class="proj-section">
+                  <h4>Opis projektu</h4>
+                  <p>Projekt przedstawia interaktywny dashboard analityczny wykonany w <strong>Microsoft Power BI</strong>, którego celem jest analiza sprzedaży przedsiębiorstwa z wykorzystaniem nowoczesnych technik wizualizacji danych. Raport umożliwia monitorowanie najważniejszych wskaźników biznesowych (KPI), analizę sprzedaży według różnych wymiarów oraz wspiera podejmowanie decyzji biznesowych. Dashboard składa się z czterech stron prezentujących różne obszary działalności firmy.</p>
+                </div>
+                <div class="proj-section">
+                  <h4>Cel projektu</h4>
+                  <ul>
+                    <li>Analiza wyników sprzedaży</li>
+                    <li>Monitorowanie rentowności przedsiębiorstwa</li>
+                    <li>Identyfikacja najlepiej sprzedających się produktów</li>
+                    <li>Analiza klientów oraz lokalizacji sprzedaży</li>
+                    <li>Porównywanie wyników w czasie</li>
+                    <li>Wspieranie procesu podejmowania decyzji</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Zastosowane technologie</h4>
+                  <ul>
+                    <li>Microsoft Power BI</li>
+                    <li>Power Query</li>
+                    <li>DAX (Data Analysis Expressions)</li>
+                    <li>Modelowanie danych</li>
+                    <li>Mapy Bing</li>
+                    <li>Karty KPI</li>
+                    <li>Segmentatory (Slicery)</li>
+                    <li>Przyciski nawigacyjne</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Struktura raportu</h4>
+                  <ul>
+                    <li><strong>Strona 1 – Podsumowanie sprzedaży:</strong> liczba zamówień, wartość sprzedaży, marża, liczba klientów; wykresy miesięczne i sprzedaż według miast</li>
+                    <li><strong>Strona 2 – Analiza produktów:</strong> sprzedaż i marża według kategorii, udział płci klientów, analiza podkategorii i zależności sprzedaż–marża</li>
+                    <li><strong>Strona 3 – Analiza geograficzna:</strong> ranking miast, mapa sprzedaży, analiza zysków i dynamika zmian</li>
+                    <li><strong>Strona 4 – Panel filtrów:</strong> filtry według roku, kwartału, miesiąca, miasta, płci i kategorii produktu</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Umiejętności zaprezentowane w projekcie</h4>
+                  <ul>
+                    <li>Projektowanie dashboardów w Power BI</li>
+                    <li>Modelowanie danych i tworzenie miar DAX</li>
+                    <li>Transformacja danych w Power Query</li>
+                    <li>Wizualizacja i analiza biznesowa</li>
+                    <li>Analiza geograficzna i sprzedażowa</li>
+                    <li>Tworzenie interaktywnych raportów</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Wartość biznesowa</h4>
+                  <p>Projekt umożliwia szybkie monitorowanie kondycji przedsiębiorstwa oraz identyfikację najważniejszych trendów sprzedażowych. Dzięki interaktywnym filtrom użytkownik może analizować dane z różnych perspektyw, łatwo identyfikować najlepiej sprzedające się produkty, najbardziej dochodowe miasta oraz grupy klientów generujące największe przychody. Dashboard stanowi narzędzie wspierające zarządzanie sprzedażą, planowanie działań marketingowych oraz optymalizację oferty produktowej.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Power BI Project 2 -->
+          <article class="project-card-full reveal">
+            <div class="project-card-full-header">
+              <h3>Container Transport Analysis Dashboard</h3>
+              <i class="fa-solid fa-ship project-icon"></i>
+            </div>
+            <p>
+              An interactive Power BI report focused on container shipping logistics. The dashboard tracks transport
+              volumes, container counts, carrier performance, route analysis and delivery delays — with a world map
+              view and monthly/yearly filters for in-depth analysis.
+            </p>
+
+            <p><strong>Report pages</strong></p>
+            <ul class="features-list">
+              <li><i class="fa-solid fa-circle-dot"></i> Page 1 – Delay analysis by carrier, route &amp; destination port</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Page 2 – Transport volumes &amp; container counts</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Overview – Executive dashboard with map &amp; trend line</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Tooltip page – Cargo weight details</li>
+            </ul>
+
+            <p><strong>KPIs tracked</strong></p>
+            <div class="kpi-row">
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> No. of Transports</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> No. of Containers</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Avg. Transit Time</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Delay Rate %</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Total Delay Days</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Total Cargo Weight</span>
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-sm">Power BI</span>
+              <span class="tag tag-sm">DAX</span>
+              <span class="tag tag-sm">Power Query</span>
+              <span class="tag tag-sm">Data Modelling</span>
+              <span class="tag tag-sm">Geo Maps</span>
+              <span class="tag tag-sm">Logistics</span>
+            </div>
+
+            <button class="btn-expand" onclick="toggleDetails(this)" aria-expanded="false">
+              <i class="fa-solid fa-chevron-down expand-icon"></i>
+              <span>Rozwiń projekt</span>
+            </button>
+
+            <div class="project-details">
+              <div class="proj-gallery">
+                <img src="other_projects/Power%20BI/Projekt2/Obraz1.png" class="proj-img" alt="Transport kontenerowy – widok 1" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Power%20BI/Projekt2/Obraz2.png" class="proj-img" alt="Transport kontenerowy – widok 2" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Power%20BI/Projekt2/Obraz3.png" class="proj-img" alt="Transport kontenerowy – widok 3" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Power%20BI/Projekt2/Obraz4.png" class="proj-img" alt="Transport kontenerowy – widok 4" onclick="openLightbox(this)" loading="lazy">
+              </div>
+              <div class="proj-text">
+                <div class="proj-section">
+                  <h4>Opis projektu</h4>
+                  <p>Projekt przedstawia interaktywny dashboard wykonany w <strong>Microsoft Power BI</strong>, którego celem jest analiza transportu kontenerowego. Raport umożliwia monitorowanie liczby transportów, kontenerów, armatorów, kierunków przewozów, portów docelowych oraz opóźnień transportowych.</p>
+                  <p>Dashboard został zaprojektowany w sposób umożliwiający szybkie podejmowanie decyzji biznesowych poprzez prezentację najważniejszych wskaźników KPI oraz możliwość filtrowania danych według roku i miesiąca.</p>
+                </div>
+                <div class="proj-section">
+                  <h4>Cel projektu</h4>
+                  <ul>
+                    <li>Analiza liczby zrealizowanych transportów</li>
+                    <li>Monitorowanie liczby przewożonych kontenerów</li>
+                    <li>Identyfikacja najczęściej wykorzystywanych armatorów</li>
+                    <li>Analiza opóźnień transportowych</li>
+                    <li>Porównywanie portów docelowych</li>
+                    <li>Analiza kierunków transportu</li>
+                    <li>Monitorowanie średniego czasu transportu</li>
+                    <li>Prezentacja danych na mapie świata</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Zastosowane narzędzia</h4>
+                  <ul>
+                    <li>Microsoft Power BI Desktop</li>
+                    <li>Power Query</li>
+                    <li>DAX (Data Analysis Expressions)</li>
+                    <li>Model relacyjny danych</li>
+                    <li>Microsoft Excel (źródło danych)</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Struktura raportu</h4>
+                  <ul>
+                    <li><strong>Strona 1 – Analiza opóźnień:</strong> liczba armatorów, kontenerów i transportów; opóźnienia według miesięcy, armatora, kierunku i portu docelowego</li>
+                    <li><strong>Strona 2 – Analiza transportów:</strong> liczba transportów i kontenerów, średni czas transportu, procent opóźnień, transporty według kierunku i portu</li>
+                    <li><strong>Overview:</strong> liniowy wykres transportów w czasie, mapa portów, analiza armatorów, kluczowe KPI, filtry rok/miesiąc</li>
+                    <li><strong>Tooltip:</strong> szczegółowe informacje dotyczące masy przewożonych ładunków</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Umiejętności zaprezentowane w projekcie</h4>
+                  <ul>
+                    <li>Modelowanie danych i tworzenie relacji</li>
+                    <li>Przygotowanie danych w Power Query</li>
+                    <li>Tworzenie miar DAX</li>
+                    <li>Projektowanie dashboardów i kart KPI</li>
+                    <li>Wykresy kolumnowe, słupkowe i liniowe</li>
+                    <li>Mapy geograficzne</li>
+                    <li>Filtrowanie i segmentacja danych (Slicery)</li>
+                    <li>Tooltip Pages</li>
+                    <li>Analiza logistyczna i transportowa</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Podsumowanie</h4>
+                  <p>Projekt stanowi przykład wykorzystania narzędzia <strong>Microsoft Power BI</strong> do analizy danych logistycznych i transportowych. Dzięki zastosowaniu interaktywnych wizualizacji, wskaźników KPI oraz możliwości filtrowania danych użytkownik może szybko analizować efektywność transportów, identyfikować opóźnienia oraz oceniać wydajność armatorów i portów docelowych.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Power BI Project 3 -->
+          <article class="project-card-full reveal">
+            <div class="project-card-full-header">
+              <h3>Wine Analysis Dashboard</h3>
+              <i class="fa-solid fa-wine-glass-empty project-icon"></i>
+            </div>
+            <p>
+              An interactive Power BI report analysing a global wine dataset. The dashboard compares wine ratings, prices,
+              review counts and premium wine share across countries and varietals. A scatter chart reveals the relationship
+              between price and quality, while slicers allow filtering by wine type (Red, White, Rosé, Other).
+            </p>
+
+            <p><strong>Key features</strong></p>
+            <ul class="features-list">
+              <li><i class="fa-solid fa-circle-dot"></i> Filter by wine type (Red / White / Rosé / Other)</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Reviews by country — bar chart ranking</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Price vs. rating scatter chart</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Average rating by varietal comparison</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Premium wine share analysis</li>
+              <li><i class="fa-solid fa-circle-dot"></i> Country of origin count</li>
+            </ul>
+
+            <p><strong>KPIs tracked</strong></p>
+            <div class="kpi-row">
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> No. of Reviews</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Avg. Rating</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Avg. Price</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> No. of Premium Wines</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> Premium Wine %</span>
+              <span class="kpi-badge"><i class="fa-solid fa-circle"></i> No. of Countries</span>
+            </div>
+
+            <div class="project-tags">
+              <span class="tag tag-sm">Power BI</span>
+              <span class="tag tag-sm">DAX</span>
+              <span class="tag tag-sm">Power Query</span>
+              <span class="tag tag-sm">Scatter Chart</span>
+              <span class="tag tag-sm">KPI Cards</span>
+              <span class="tag tag-sm">Data Analysis</span>
+            </div>
+
+            <button class="btn-expand" onclick="toggleDetails(this)" aria-expanded="false">
+              <i class="fa-solid fa-chevron-down expand-icon"></i>
+              <span>Rozwiń projekt</span>
+            </button>
+
+            <div class="project-details">
+              <div class="proj-gallery">
+                <img src="other_projects/Power%20BI/Projekt3/Obraz1.png" class="proj-img" alt="Wine Analysis – widok 1" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Power%20BI/Projekt3/Obraz2.png" class="proj-img" alt="Wine Analysis – widok 2" onclick="openLightbox(this)" loading="lazy">
+                <img src="other_projects/Power%20BI/Projekt3/Obraz3.png" class="proj-img" alt="Wine Analysis – widok 3" onclick="openLightbox(this)" loading="lazy">
+              </div>
+              <div class="proj-text">
+                <div class="proj-section">
+                  <h4>Opis projektu</h4>
+                  <p><strong>Wine Analysis Dashboard</strong> to interaktywny raport stworzony w <strong>Microsoft Power BI</strong>, którego celem jest analiza danych dotyczących win pochodzących z różnych krajów świata. Dashboard umożliwia analizę ocen użytkowników, cen win, liczby recenzji, udziału win premium oraz porównanie różnych odmian win (varietal).</p>
+                  <p>Raport został zaprojektowany z myślą o szybkim dostępie do kluczowych informacji i wspieraniu analizy rynku winiarskiego za pomocą czytelnych wizualizacji oraz wskaźników KPI.</p>
+                </div>
+                <div class="proj-section">
+                  <h4>Cel projektu</h4>
+                  <ul>
+                    <li>Analiza ocen win</li>
+                    <li>Analiza średnich cen</li>
+                    <li>Porównywanie krajów pod względem liczby recenzji</li>
+                    <li>Identyfikacja najpopularniejszych odmian win</li>
+                    <li>Analiza win premium</li>
+                    <li>Porównanie relacji ceny do jakości</li>
+                    <li>Filtrowanie danych według rodzaju wina</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Zastosowane narzędzia</h4>
+                  <ul>
+                    <li>Microsoft Power BI Desktop</li>
+                    <li>Power Query</li>
+                    <li>DAX (Data Analysis Expressions)</li>
+                    <li>Model relacyjny danych</li>
+                    <li>Microsoft Excel / CSV (źródło danych)</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Funkcjonalności raportu</h4>
+                  <ul>
+                    <li>Filtrowanie danych według rodzaju wina (Red, White, Rosé, Other)</li>
+                    <li>Analiza liczby recenzji i średniej oceny</li>
+                    <li>Analiza średniej ceny</li>
+                    <li>Monitorowanie liczby i udziału win premium</li>
+                    <li>Porównanie liczby recenzji według kraju</li>
+                    <li>Wykres punktowy: zależność cena – ocena</li>
+                    <li>Porównanie średnich ocen dla odmian win (varietal)</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Najważniejsze analizy</h4>
+                  <ul>
+                    <li>Które kraje posiadają największą liczbę recenzowanych win?</li>
+                    <li>Czy wyższa cena oznacza wyższą ocenę wina?</li>
+                    <li>Jakie odmiany win uzyskują najwyższe oceny?</li>
+                    <li>Jaki jest udział win premium w całym zbiorze danych?</li>
+                    <li>Które typy win dominują na rynku?</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Umiejętności zaprezentowane w projekcie</h4>
+                  <ul>
+                    <li>Modelowanie danych i transformacja w Power Query</li>
+                    <li>Tworzenie relacji pomiędzy tabelami</li>
+                    <li>Projektowanie interaktywnych dashboardów</li>
+                    <li>Tworzenie miar DAX</li>
+                    <li>Wykres punktowy (Scatter Chart)</li>
+                    <li>Analiza porównawcza</li>
+                    <li>Filtrowanie danych przy użyciu segmentatorów</li>
+                    <li>Projektowanie wizualizacji zgodnie z zasadami BI</li>
+                  </ul>
+                </div>
+                <div class="proj-section">
+                  <h4>Podsumowanie</h4>
+                  <p>Projekt prezentuje praktyczne zastosowanie narzędzia <strong>Microsoft Power BI</strong> do analizy danych z branży winiarskiej. Dzięki zastosowaniu wskaźników KPI, wykresów analitycznych, segmentatorów oraz interaktywnych wizualizacji raport umożliwia szybkie porównywanie jakości, cen i popularności win pochodzących z różnych krajów.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /category-section Power BI -->
+
+        <!-- ===== PYTHON ===== -->
+        <div class="category-section">
+          <div class="category-heading">
+            <div class="category-heading-icon">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <h2>
+              Python
+              <span>Demonstracyjne projekty w czystym Pythonie</span>
+            </h2>
+          </div>
+
+          <!-- Python Project 1 -->
+          <article class="project-card-full reveal">
+            <div class="project-card-full-header">
+              <h3>Podstawy Pythona – Projekt demonstracyjny</h3>
+              <a href="https://github.com/MarcinSucharzewski/python-basics" target="_blank" rel="noopener noreferrer" aria-label="Zobacz na GitHub" style="color:var(--accent);font-size:1.4rem;">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <p>
+              Projekt prezentuje znajomość podstawowych elementów języka <strong>Python 3.10+</strong>.
+              Składa się z siedmiu niezależnych modułów obejmujących zmienne i typy, operatory, instrukcje sterujące,
+              funkcje, kolekcje, programowanie obiektowe (OOP) oraz obsługę wyjątków i plików.
+              Wyłącznie biblioteka standardowa — bez zewnętrznych zależności.
+            </p>
+
+            <div class="project-tags">
+              <span class="tag tag-sm">Python 3.10+</span>
+              <span class="tag tag-sm">OOP</span>
+              <span class="tag tag-sm">Kolekcje</span>
+              <span class="tag tag-sm">Funkcje</span>
+              <span class="tag tag-sm">Wyjątki i pliki</span>
+              <span class="tag tag-sm">Biblioteka standardowa</span>
+            </div>
+
+            <button class="btn-expand" onclick="toggleDetails(this)" aria-expanded="false">
+              <i class="fa-solid fa-chevron-down expand-icon"></i>
+              <span>Rozwiń projekt</span>
+            </button>
+
+            <div class="project-details">
+              <div class="proj-text">
+                <div class="proj-section">
+                  <h4>Opis projektu</h4>
+                  <p>Projekt prezentuje znajomość podstawowych elementów języka <strong>Python 3.10+</strong>.
+                  Każdy moduł jest samodzielnym plikiem <code style="font-family:var(--font-mono);color:var(--accent);font-size:0.85em;">.py</code>,
+                  który można uruchomić oddzielnie lub przez <code style="font-family:var(--font-mono);color:var(--accent);font-size:0.85em;">main.py</code>.</p>
+                </div>
+
+                <div class="proj-section">
+                  <h4>Struktura projektu</h4>
+                  <ul>
+                    <li><strong>main.py</strong> – punkt wejścia (uruchamia wszystkie moduły)</li>
+                    <li><strong>01_zmienne_i_typy.py</strong> – int, float, str, bool, None, casting</li>
+                    <li><strong>02_operatory.py</strong> – arytmetyczne, porównania, logiczne, bitowe</li>
+                    <li><strong>03_instrukcje_i_petle.py</strong> – if/elif/else, match-case, for, while, break/continue</li>
+                    <li><strong>04_funkcje.py</strong> – def, *args/**kwargs, lambda, rekurencja, dekoratory</li>
+                    <li><strong>05_kolekcje.py</strong> – list, tuple, set, dict, comprehensions, Counter</li>
+                    <li><strong>06_klasy_oop.py</strong> – klasy, dziedziczenie, polimorfizm, enkapsulacja, dataclass</li>
+                    <li><strong>07_wyjatki_i_pliki.py</strong> – try/except/finally, własne wyjątki, pliki txt/csv, pathlib</li>
+                  </ul>
+                </div>
+
+                <div class="proj-section">
+                  <h4>Omawiane zagadnienia</h4>
+                  <ul>
+                    <li><strong>Zmienne i typy:</strong> int, float, complex, str, bool, None, konwersja typów, wielokrotne przypisanie</li>
+                    <li><strong>Operatory:</strong> arytmetyczne, porównania, logiczne, bitowe, pierwszeństwo operatorów</li>
+                    <li><strong>Instrukcje i pętle:</strong> if/elif/else, match/case, for, while, break, continue, else, list comprehension</li>
+                    <li><strong>Funkcje:</strong> parametry domyślne, *args, **kwargs, lambda, map/filter, rekurencja, domknięcia, dekoratory</li>
+                    <li><strong>Kolekcje:</strong> list, tuple, set, dict, operacje teorii zbiorów, dict comprehension, Counter</li>
+                    <li><strong>Klasy OOP:</strong> __init__, dziedziczenie, super(), polimorfizm, @property, @classmethod, @staticmethod, dataclass</li>
+                    <li><strong>Wyjątki i pliki:</strong> try/except/else/finally, własne wyjątki, pliki tekstowe, CSV, pathlib</li>
+                  </ul>
+                </div>
+
+                <div class="proj-section">
+                  <h4>Wymagania</h4>
+                  <ul>
+                    <li>Python <strong>3.10</strong> lub nowszy (ze względu na match/case)</li>
+                    <li>Brak zewnętrznych bibliotek – wyłącznie biblioteka standardowa</li>
+                  </ul>
+                </div>
+
+                <div class="proj-section">
+                  <h4>Uruchomienie</h4>
+                  <ul>
+                    <li>Wszystkie moduły: <code style="font-family:var(--font-mono);color:var(--accent);font-size:0.85em;">python main.py</code></li>
+                    <li>Wybrane moduły (np. 1, 3 i 5): <code style="font-family:var(--font-mono);color:var(--accent);font-size:0.85em;">python main.py 1 3 5</code></li>
+                    <li>Pojedynczy moduł: <code style="font-family:var(--font-mono);color:var(--accent);font-size:0.85em;">python 04_funkcje.py</code></li>
+                  </ul>
+                </div>
+
+                <div class="proj-section" style="padding-top:4px;">
+                  <a href="https://github.com/MarcinSucharzewski/python-basics" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    <i class="fa-brands fa-github"></i> Zobacz na GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /category-section Python -->
+
+        <div class="page-footer-action">
+          <a href="index.html" class="btn btn-outline">
+            <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p><strong>Marcin Sucharzewski</strong></p>
+      <div class="footer-socials">
+        <a href="https://github.com/MarcinSucharzewski" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+    <button id="lb-close" class="lb-btn" onclick="closeLightbox()" aria-label="Zamknij"><i class="fa-solid fa-xmark"></i></button>
+    <button id="lb-prev"  class="lb-btn" onclick="lbPrev()"        aria-label="Poprzednie zdjęcie"><i class="fa-solid fa-chevron-left"></i></button>
+    <img id="lb-img" src="" alt="" />
+    <button id="lb-next"  class="lb-btn" onclick="lbNext()"        aria-label="Następne zdjęcie"><i class="fa-solid fa-chevron-right"></i></button>
+    <span id="lb-counter"></span>
+  </div>
+
+  <script>
+    /* ---- Expand / collapse ---- */
+    function toggleDetails(btn) {
+      const article = btn.closest('article');
+      const panel   = article.querySelector('.project-details');
+      const label   = btn.querySelector('span');
+      const isOpen  = btn.getAttribute('aria-expanded') === 'true';
+
+      if (isOpen) {
+        panel.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+        label.textContent = 'Rozwiń projekt';
+      } else {
+        panel.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+        label.textContent = 'Zwiń projekt';
+        setTimeout(() => panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 60);
+      }
+    }
+
+    /* ---- Lightbox ---- */
+    let lbImages = [];
+    let lbIndex  = 0;
+
+    function openLightbox(img) {
+      const gallery = img.closest('.proj-gallery');
+      lbImages = Array.from(gallery.querySelectorAll('.proj-img'));
+      lbIndex  = lbImages.indexOf(img);
+      document.getElementById('lightbox').classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      renderLightbox();
+      document.addEventListener('keydown', lbKey);
+    }
+
+    function renderLightbox() {
+      document.getElementById('lb-img').src     = lbImages[lbIndex].src;
+      document.getElementById('lb-img').alt     = lbImages[lbIndex].alt;
+      document.getElementById('lb-counter').textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+      document.getElementById('lb-prev').style.visibility = lbIndex > 0 ? 'visible' : 'hidden';
+      document.getElementById('lb-next').style.visibility = lbIndex < lbImages.length - 1 ? 'visible' : 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('is-open');
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', lbKey);
+    }
+
+    function lbPrev() { if (lbIndex > 0)                  { lbIndex--; renderLightbox(); } }
+    function lbNext() { if (lbIndex < lbImages.length - 1) { lbIndex++; renderLightbox(); } }
+
+    function lbKey(e) {
+      if (e.key === 'Escape')     closeLightbox();
+      if (e.key === 'ArrowLeft')  lbPrev();
+      if (e.key === 'ArrowRight') lbNext();
+    }
+
+    /* Close on background click */
+    document.getElementById('lightbox').addEventListener('click', function (e) {
+      if (e.target === this) closeLightbox();
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
