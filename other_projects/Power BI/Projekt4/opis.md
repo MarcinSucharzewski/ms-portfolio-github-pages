@@ -1,15 +1,15 @@
-Bakery Sales Report
+Sales Performance Dashboard
 
 ## Project overview
-This project presents a three-page sales report created in Microsoft Power BI for a bakery business. The dashboard analyses sales, products, orders and locations using interactive visuals, KPI indicators, filters and a map view.
+This project presents a four-page business dashboard developed in Microsoft Power BI for analysing sales performance across a company. The report combines key business indicators, product and customer analysis, geographic insights, and interactive filters to help users explore data from different perspectives.
 
 ## Project objective
-The objective was to create a clear Business Intelligence report that enables users to:
-- monitor key transport results,
-- analyse data by time and location,
-- compare results across selected data dimensions,
-- identify important trends quickly,
-- support data-driven business decisions.
+The main goal was to create a clear and interactive Business Intelligence solution that allows users to:
+- monitor sales performance and profitability,
+- analyse results by time, customer segment, and product category,
+- compare business outcomes across different locations,
+- identify trends and key business opportunities,
+- support strategic and operational decision-making.
 
 ## Tools and technologies
 - Microsoft Power BI Desktop
@@ -19,27 +19,36 @@ The objective was to create a clear Business Intelligence report that enables us
 - Interactive visualisations
 - Bing Maps
 - KPI cards
-- Slicers
+- Slicers and navigation buttons
 
 ## Report structure
-The report consists of three pages combining an overview with more detailed data analysis. The visuals support time-based analysis, comparisons across selected dimensions and map-based location analysis.
+The dashboard is divided into four pages:
+- Overview page – key sales metrics and trend analysis,
+- Product analysis – category performance, margin evaluation, and product contribution,
+- Geographic analysis – city performance, sales maps, and regional comparison,
+- Filter panel – dynamic filtering by year, quarter, month, city, gender, and product category.
 
 ## Key features
 - interactive dashboard,
-- KPI cards presenting key values,
-- trend analysis,
-- geographic analysis using Bing Maps,
-- slicer-based data filtering,
+- KPI cards for core business metrics,
+- monthly sales and margin trend analysis,
+- product category and subcategory assessment,
+- customer and city-based segmentation,
+- geographic visualisation using Bing Maps,
+- slicer-based filtering for multi-dimension analysis,
 - multi-page report navigation.
 
 ## Skills demonstrated
 - data preparation and transformation,
 - data modelling in Power BI,
-- creating DAX measures,
-- dashboard design,
-- selecting visuals for business analysis,
-- presenting spatial data,
-- building interactive reports.
+- creating DAX measures and calculations,
+- dashboard and report design,
+- selecting appropriate visuals for business analysis,
+- presenting spatial and performance data,
+- building interactive business reports.
+
+## Business value
+The project helps managers and analysts quickly monitor the health of the business, identify the strongest sales drivers, and detect areas requiring attention. With interactive filters and clear KPI visualisations, users can analyse performance across products, cities, customer groups, and time periods. This makes the dashboard a practical tool for sales monitoring, marketing planning, and business optimisation.
 
 ## Summary
-The project demonstrates the practical use of Microsoft Power BI to create a report supporting transport and logistics analysis. Combining KPIs, filters, trends and mapping enables users to move quickly from a high-level overview to a detailed analysis of the data.
+This project demonstrates the practical application of Microsoft Power BI in creating a professional sales analysis dashboard. By combining KPIs, filters, trends, and geographic insights, the report delivers a clear overview of business performance and supports data-driven decision-making.
